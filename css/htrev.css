@@ -1,0 +1,505 @@
+/* 기본 초기화 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+}
+
+/* =========================
+   공통 전체 폭 영역
+========================= */
+
+header,
+.title-banner,
+footer {
+  width: 100%;
+}
+
+/* =========================
+   서브 페이지 content
+========================= */
+
+.content-inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* =========================
+   home.html main
+========================= */
+
+.home {
+  width: 100%;
+}
+
+.main-visual {
+  width: 100%;
+}
+
+.home-room {
+  width: 100%;
+}
+
+.home-service {
+  width: 100%;
+}
+/* =========================
+   home.html home-slider
+========================= */
+
+.home-slider {
+  width: 100%;
+  margin-top: 64px;
+}
+
+.mySwiper {
+  width: 100%;
+  height: 600px;
+}
+
+/* 메인 Swiper의 slide에만 적용 */
+.mySwiper .swiper-slide {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+/* 메인 이미지 */
+.mySwiper .swiper-slide img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* 이미지 위 검은 투명막 */
+.mySwiper .swiper-slide::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.1);
+
+  z-index: 1;
+
+  /* 버튼의 hover를 방해하지 않게 */
+  pointer-events: none;
+}
+
+/* =========================
+   Slider Text
+========================= */
+
+.slide-text {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  color: #fff;
+
+  /* 검은 overlay보다 위 */
+  z-index: 10;
+}
+
+.slide-text h2 {
+  margin-bottom: 26px;
+
+  font-size: 48px;
+  font-weight: 550;
+
+  color: #fff;
+}
+
+/* =========================
+   SEE MORE
+========================= */
+
+.see-more {
+  padding: 10px 24px;
+
+  border: 1px solid #fff;
+  background-color: transparent;
+
+  color: #fff;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.see-more:hover {
+  background-color: #fff;
+  color: #222;
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   home.html room-slider
+========================= */
+.rooms-section {
+  width: 100%;
+  height: 400px;
+}
+
+.rooms-title {
+  text-align: center;
+  margin-bottom: 28px;
+  margin-top: 28px;
+}
+
+/* ROOMS Swiper */
+.roomsSwiper {
+  width: 100%;
+  padding-left: 60px;
+
+  overflow: hidden;
+  box-sizing: border-box;
+  direction: ltr; /* <<<<< 이게 뭐임?*/
+}
+
+/* 객실 하나의 크기 */
+.roomsSwiper .swiper-slide {
+  width: 400px;
+  height: 300px;
+  flex-shrink: 0;
+}
+
+/* 객실 이미지 */
+.roomsSwiper .swiper-slide img {
+  display: block;
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+.roomsSwiper .swiper-wrapper {
+  transition-timing-function: linear;
+}
+/* =========================
+   home.html event
+========================= */
+.event-section {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 60px;
+}
+.event-title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.event-list {
+  display: flex;
+  gap: 40px;
+  padding-left: 60px;
+}
+.event-item {
+  width: 400px;
+  height: 300px;
+  flex-shrink: 0;
+}
+.event-item img {
+  display: block;
+
+  width: 400px;
+  height: 300px;
+
+  object-fit: cover;
+}
+.event-item p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+/* =========================
+   home.html bottom-title
+========================= */
+.bottom-title {
+  width: 100%;
+  min-height: clamp(320px, 35vw, 600px);
+
+  background-image: url("../image/hetel/home/bottom-title.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.bottom-title-content {
+  width: 100%;
+  max-width: 900px;
+
+  text-align: center;
+  color: white;
+}
+
+.bottom-title-icon {
+  width: clamp(40px, 5vw, 60px);
+  height: auto;
+
+  margin-bottom: 20px;
+}
+
+.bottom-title-content h2 {
+  margin-bottom: 20px;
+
+  font-size: clamp(24px, 3vw, 36px);
+}
+
+.bottom-title-content p {
+  font-size: clamp(12px, 1.2vw, 16px);
+  line-height: 1.8;
+}
+
+/* =========================
+   component 
+========================= */
+/* =========================
+   Header
+========================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  background-color: #fff;
+
+  z-index: 1000;
+}
+
+.header-inner {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   Logo
+========================= */
+
+.header-logo {
+  margin-top: 24px;
+  margin-bottom: 20px;
+
+  color: #111;
+  font-size: 48px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  text-decoration: none;
+}
+
+/* =========================
+   Navigation
+========================= */
+
+.header-nav {
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: block;
+
+  padding: 10px 0 18px;
+
+  color: #222;
+
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* =========================
+   Dropdown
+========================= */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 150px;
+  margin: 0;
+  padding: 15px 20px;
+  background-color: #fff;
+  list-style: none;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+.dropdown li {
+  margin-bottom: 12px;
+}
+.dropdown li:last-child {
+  margin-bottom: 0;
+}
+.dropdown a {
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+/* =========================
+   Dropdown Hover
+========================= */
+
+.nav-item:hover .dropdown,
+.nav-item:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 1차 메뉴 hover */
+.nav-link:hover {
+  color: #888;
+}
+
+/* 2차 메뉴 hover */
+.dropdown a:hover {
+  color: #999;
+}
+/* =========================
+   Footer
+========================= */
+.footer {
+  width: 100%;
+  background-color: #1d1d1d;
+  padding: 50px 20px 50px;
+  color: #fff;
+}
+.footer-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+/* =========================
+   Footer Logo
+========================= */
+.footer-logo {
+  margin: 0 0 30px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1;
+}
+/* =========================
+   SNS
+========================= */
+.footer-sns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+/* 아이콘 하나가 들어갈 작은 상자 */
+.sns-item {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+/* 실제 아이콘 */
+.sns-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+/* 처음 상태 */
+.sns-default {
+  opacity: 1;
+}
+.sns-hover {
+  opacity: 0;
+}
+/* hover */
+.sns-item:hover .sns-default {
+  opacity: 0;
+}
+.sns-item:hover .sns-hover {
+  opacity: 1;
+}
+/* 살짝 확대 */
+.sns-item:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   to-top
+========================= */
+.to-top {
+  position: fixed;
+  right: 25px;
+  bottom: 50px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+.to-top img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}

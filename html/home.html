@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../css/htrev.css" />
+  </head>
+  <body>
+    <site-header></site-header>
+
+    <main class="home">
+      <section class="home-slider">
+        <!-- 메인 이미지 슬라이더 -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <!-- 첫 번째 슬라이드 -->
+            <div class="swiper-slide">
+              <img
+                src="../image/hetel/home/home-slider1.png"
+                alt="SWEET MOMENT"
+              />
+
+              <div class="slide-text">
+                <h2>SWEET MOMENT</h2>
+                <button class="see-more" type="button">SEE MORE</button>
+              </div>
+            </div>
+
+            <!-- 두 번째 슬라이드 -->
+            <div class="swiper-slide">
+              <img
+                src="../image/hetel/home/home-slider2.png"
+                alt="URBAN RESORT"
+              />
+
+              <div class="slide-text">
+                <h2>URBAN RESORT</h2>
+                <button class="see-more" type="button">SEE MORE</button>
+              </div>
+            </div>
+
+            <!-- 세 번째 슬라이드 -->
+            <div class="swiper-slide">
+              <img
+                src="../image/hetel/home/home-slider3.png"
+                alt="RELAX & RELIEF"
+              />
+
+              <div class="slide-text">
+                <h2>RELAX & RELIEF</h2>
+                <button class="see-more" type="button">SEE MORE</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <section class="home-content">
+        <section class="rooms-section">
+          <!--room-->
+          <h2 class="rooms-title">ROOMS</h2>
+          <div class="swiper roomsSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="../image/hetel/home/room-slider1.png" alt="객실 1" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="../image/hetel/home/room-slider2.png" alt="객실 2" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="../image/hetel/home/room-slider3.png" alt="객실 3" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="../image/hetel/home/room-slider4.png" alt="객실 4" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="../image/hetel/home/room-slider5.png" alt="객실 5" />
+              </div>
+              <!-- 순환을 위해 한 번 더 반복 -->
+              <div class="swiper-slide">
+                <img src="../image/hetel/home/room-slider1.png" alt="객실 1" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="../image/hetel/home/room-slider2.png" alt="객실 2" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="../image/hetel/home/room-slider3.png" alt="객실 3" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="../image/hetel/home/room-slider4.png" alt="객실 4" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="../image/hetel/home/room-slider5.png" alt="객실 5" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="event-section">
+          <!--event-->
+          <h2 class="event-title">EVENT</h2>
+
+          <div class="event-list">
+            <div class="event-item">
+              <img src="../image/hetel/home/event1.png" alt="이벤트 1" />
+              <p>봄 특가 이벤트</p>
+            </div>
+
+            <div class="event-item">
+              <img src="../image/hetel/home/event2.png" alt="이벤트 2" />
+              <p>5월 주요행사</p>
+            </div>
+
+            <div class="event-item">
+              <img src="../image/hetel/home/event3.png" alt="이벤트 3" />
+              <p>새로운 객실을 기대해주세요</p>
+            </div>
+
+            <div class="event-item">
+              <img src="../image/hetel/home/event4.png" alt="이벤트 4" />
+              <p>스파 프로그램 할인</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="bottom-title">
+        <!-- 2024 BEST HOTEL -->
+        <div class="bottom-title-content">
+          <img
+            class="bottom-title-icon"
+            src="../image/hetel/home/bottom-title-Icon.png"
+            alt="bottom-title-icon"
+          />
+          <div class="bottom-title-text">
+            <h2>2024 BEST HOTEL</h2>
+            <p>
+              Can one ever remember love<br />
+              Its like trying to summon up<br />
+              the smell of rose sin a cellar.<br />
+              you might see a rose, but never the perfume.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <site-footer></site-footer>
+
+    <to-top></to-top>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/home.js"></script>
+  </body>
+</html>
