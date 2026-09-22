@@ -1,0 +1,612 @@
+/* =========================
+   기본 설정
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #222;
+  background-color: #fff;
+}
+
+main {
+  width: 100%;
+}
+/* =========================
+   reservation-room.html
+========================= */
+
+/* =========================
+   Reservation Visual
+========================= */
+
+.reservation-visual {
+  position: relative;
+  width: 100%;
+  max-width: 2000px;
+  height: 400px;
+  margin: 64px auto 0;
+  overflow: hidden;
+}
+
+.reservation-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RESERVATION + 실시간예약 */
+.reservation-visual-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.reservation-visual-text h1 {
+  padding-top: 40px;
+  font-size: 50px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+.reservation-visual-text p {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+/* =========================
+   Room Select
+========================= */
+
+.room-select {
+  width: 100%;
+  padding: 55px 20px 40px;
+  box-sizing: border-box;
+}
+
+/* 객실 선택 */
+.room-select-title {
+  margin: 0 0 40px;
+
+  text-align: center;
+
+  font-size: 32px;
+  font-weight: 500;
+}
+
+/* 객실 전체 리스트 */
+.room-list {
+  width: 950px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* =========================
+   Room Item
+========================= */
+
+.room-item {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 195px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+  color: #fff;
+}
+
+/* 객실 이미지 */
+.room-item img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+/* 객실 이미지 위 어두운 배경 */
+.room-item::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  transition: background 0.3s ease;
+}
+
+/* 객실 이름 + 화살표 */
+.room-item-content {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  transform: translate(-50%, -50%);
+}
+
+/* STANDARD / DELUXE / ... */
+.room-item-content h3 {
+  margin: 0;
+
+  color: #fff;
+
+  font-size: 31px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* =========================
+   Arrow
+========================= */
+
+.room-arrow {
+  position: relative;
+  display: block;
+  width: 115px;
+  height: 20px;
+}
+
+/* 가로 선 */
+.arrow-line {
+  position: absolute;
+
+  top: 50%;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: #fff;
+
+  transform: translateY(-50%);
+}
+
+/* 화살표 끝 */
+.arrow-head {
+  position: absolute;
+
+  top: 50%;
+  right: -4.6px;
+
+  font-size: 55px;
+  font-weight: 200;
+
+  transform: translateY(-60.8%);
+}
+
+/* =========================
+   Room Hover
+========================= */
+
+.room-item:hover img {
+  transform: scale(1.04);
+}
+
+.room-item:hover::after {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   Reservation Notice
+========================= */
+
+.reservation-notice {
+  width: 950px;
+  max-width: calc(100% - 40px);
+
+  margin: 40px auto 70px;
+
+  border: 1px solid #e5e5e5;
+
+  box-sizing: border-box;
+}
+
+/* 취소 및 환불 규정 */
+.reservation-notice-title {
+  margin: 0;
+
+  padding: 13px 18px;
+
+  background: #e5e5e5;
+
+  color: #444;
+
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* 안내 내용 */
+.reservation-notice-content {
+  width: 100%;
+
+  padding: 22px 25px;
+
+  background-color: #fff;
+
+  border: 1px solid #e5e5e5;
+  border-top: none;
+}
+
+.reservation-notice-content p {
+  font-size: 14px;
+  line-height: 2;
+
+  color: #555;
+}
+
+.reservation-notice-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1024px) {
+  .reservation-visual {
+    height: 320px;
+  }
+
+  .reservation-visual-text h1 {
+    font-size: 31px;
+  }
+
+  .room-list {
+    width: 85%;
+  }
+
+  .room-item {
+    height: 170px;
+  }
+
+  .room-item-content h3 {
+    font-size: 27px;
+  }
+
+  .room-arrow {
+    width: 90px;
+  }
+
+  .reservation-notice {
+    width: 85%;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+  .reservation-visual {
+    height: 250px;
+  }
+
+  .reservation-visual-text h1 {
+    font-size: 26px;
+  }
+
+  .reservation-visual-text p {
+    font-size: 12px;
+  }
+
+  /* 객실 선택 */
+  .room-select {
+    padding: 40px 15px 25px;
+  }
+
+  .room-select-title {
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+
+  /* 객실 영역 */
+  .room-list {
+    width: 100%;
+  }
+
+  .room-item {
+    height: 145px;
+  }
+
+  /* 객실 텍스트 */
+  .room-item-content {
+    gap: 15px;
+  }
+
+  .room-item-content h3 {
+    font-size: 23px;
+  }
+
+  /* 화살표 */
+  .room-arrow {
+    width: 70px;
+  }
+
+  /* 안내문 */
+  .reservation-notice {
+    width: auto;
+    max-width: none;
+
+    margin: 30px 15px 50px;
+  }
+
+  .reservation-notice-title {
+    font-size: 13px;
+  }
+
+  .reservation-notice-content p {
+    font-size: 11px;
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 480px) {
+  .reservation-visual {
+    height: 210px;
+  }
+
+  .reservation-visual-text h1 {
+    font-size: 23px;
+  }
+
+  .room-item {
+    height: 120px;
+  }
+
+  .room-item-content h3 {
+    font-size: 19px;
+  }
+
+  .room-arrow {
+    width: 55px;
+  }
+}
+
+/* =========================
+   component 
+========================= */
+/* =========================
+   Header
+========================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  background-color: #fff;
+
+  z-index: 1000;
+}
+
+.header-inner {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   Logo
+========================= */
+
+.header-logo {
+  margin-top: 24px;
+  margin-bottom: 20px;
+
+  color: #111;
+  font-size: 48px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  text-decoration: none;
+}
+
+/* =========================
+   Navigation
+========================= */
+
+.header-nav {
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: block;
+
+  padding: 10px 0 18px;
+
+  color: #222;
+
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* =========================
+   Dropdown
+========================= */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 150px;
+  margin: 0;
+  padding: 15px 20px;
+  background-color: #fff;
+  list-style: none;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+.dropdown li {
+  margin-bottom: 12px;
+}
+.dropdown li:last-child {
+  margin-bottom: 0;
+}
+.dropdown a {
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+/* =========================
+   Dropdown Hover
+========================= */
+
+.nav-item:hover .dropdown,
+.nav-item:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 1차 메뉴 hover */
+.nav-link:hover {
+  color: #888;
+}
+
+/* 2차 메뉴 hover */
+.dropdown a:hover {
+  color: #999;
+}
+/* =========================
+   Footer
+========================= */
+.footer {
+  width: 100%;
+  background-color: #1d1d1d;
+  padding: 50px 20px 50px;
+  color: #fff;
+}
+.footer-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+/* =========================
+   Footer Logo
+========================= */
+.footer-logo {
+  margin: 0 0 30px;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1;
+}
+/* =========================
+   SNS
+========================= */
+.footer-sns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+/* 아이콘 하나가 들어갈 작은 상자 */
+.sns-item {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+/* 실제 아이콘 */
+.sns-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+/* 처음 상태 */
+.sns-default {
+  opacity: 1;
+}
+.sns-hover {
+  opacity: 0;
+}
+/* hover */
+.sns-item:hover .sns-default {
+  opacity: 0;
+}
+.sns-item:hover .sns-hover {
+  opacity: 1;
+}
+/* 살짝 확대 */
+.sns-item:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   to-top
+========================= */
+.to-top {
+  position: fixed;
+  right: 25px;
+  bottom: 50px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+.to-top img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}

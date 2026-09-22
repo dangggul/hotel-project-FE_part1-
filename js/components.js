@@ -30,7 +30,7 @@ class SiteHeader extends HTMLElement {
                 <a href="#" class="nav-link">RESERVATION</a>
                 <ul class="dropdown">
                   <li><a href="reservation-guide.html">예약안내</a></li>
-                  <li><a href="#">실시간 예약</a></li>
+                  <li><a href="reservation.html">실시간 예약</a></li>
                 </ul>
               </li>
               <!-- COMMUNITY -->
